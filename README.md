@@ -5,6 +5,9 @@ Relx
 
 A release assembler for Erlang.
 
+NOTE AND WARNING: This fork abandons rebar3 and uses erlang.mk instead, 
+owing to the deeply held (albeit objectively correct) opinions of the forker.  
+
 Synopsis
 --------
 
@@ -27,22 +30,14 @@ Building
 
 To build relx and generate a standalone escript executable:
 
-    $ ./rebar3 escriptize
+    $ ./make escript_legacy
 
-This creates the executable `_build/default/bin/relx`.
+This creates the executable `relx`.
 
 Building on Windows
 -------------------
 
-To build relx on Windows you'll need to have rebar3 installed and the path to
-the rebar3 binary added to the `PATH` environment variable. To start the build
-use the `bootstrap` batch file:
-
-    c:\> bootstrap
-
-This creates the executable `relx` and the `relx.cmd` shortcut script. Copy
-both of these files to a directory and make the directory available to the
-`PATH` environment variable.
+This particular fork may or may not build on Windows.
 
 Config File
 -----------
