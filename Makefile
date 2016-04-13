@@ -50,7 +50,7 @@ endef
 
 ESCRIPT_LEGACY_COMMAND = $(subst ' ',,$(ESCRIPT_LEGACY_RAW))
 
-escript_legacy:: distclean-escript deps app
+escript_legacy:: deps app
 	$(gen_verbose) $(ERL) -eval $(ESCRIPT_LEGACY_COMMAND)
 
 include erlang.mk
